@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Guía Digital - Plantilla Educativa</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="lib/turn.min.js"></script>
+</head>
+<body>
+    <div class="navigation">
+        <button onclick="$('#flipbook').turn('previous')">⬅ Anterior</button>
+        <button onclick="$('#flipbook').turn('next')">Siguiente ➡</button>
+    </div>
+
+    <!-- INICIO DEL LIBRO -->
+    <div id="flipbook">
+        <!-- Página 1: Portada editable -->
+        <div class="page">
+            <h1 contenteditable="true" title="Haz clic para editar el título">Título de la guía</h1>
+            <p contenteditable="true" title="Haz clic para editar el nombre del autor">Autor: Nombre del alumno</p>
+            <p contenteditable="true" title="Haz clic para editar el grupo o curso">Grupo: Ejemplo</p>
+            <p contenteditable="true" title="Haz clic para editar la fecha">Fecha: 2025</p>
+        </div>
+
+        <!-- Página 2: Introducción -->
+        <div class="page">
+            <h2 contenteditable="true" title="Haz clic para editar el subtítulo">Introducción</h2>
+            <p contenteditable="true" title="Haz clic para editar el texto de introducción">
+                Aquí escribe la introducción de tu guía digital.
+            </p>
+        </div>
+
+        <!-- Página 3: Contenido principal -->
+        <div class="page">
+            <h2 contenteditable="true">Página 3 - Contenido</h2>
+            <p contenteditable="true">
+                Explica aquí la información que quieres compartir con tus lectores.
+            </p>
+        </div>
+
+        <!-- Página 4: Contenido -->
+        <div class="page">
+            <h2 contenteditable="true">Página 4 - Contenido</h2>
+            <p contenteditable="true">
+                Continúa con el desarrollo de tu tema.
+            </p>
+        </div>
+
+        <!-- Página 5: Contenido -->
+        <div class="page">
+            <h2 contenteditable="true">Página 5 - Contenido</h2>
+            <p contenteditable="true">
+                Agrega más detalles o ejemplos aquí.
+            </p>
+        </div>
+
+        <!-- Página 6: Cierre -->
+        <div class="page">
+            <h2 contenteditable="true">Conclusión</h2>
+            <p contenteditable="true">
+                Aquí escribe las conclusiones y recomendaciones finales.
+            </p>
+        </div>
+    </div>
+    <!-- FIN DEL LIBRO -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#flipbook").turn({
+                width: 800,
+                height: 500,
+                autoCenter: true,
+            });
+        });
+    </script>
+</body>
+</html>
